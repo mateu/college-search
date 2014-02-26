@@ -8,4 +8,5 @@ Search by college name:
 OR
     http://$app-name.domain.org/
 
-
+NOTES: indexing over to a remote docker container required me increasing the requestTimeout (to 100 seconds from 30 seconds)
+for the indexing to complete.

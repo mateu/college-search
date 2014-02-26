@@ -10,7 +10,9 @@ app.set("views", __dirname + "/views");
 app.set('view engine', 'hjs');
 app.use(express.static(path.join(__dirname, 'public')));
 
-var client = new elasticsearch.Client(); 
+var client = new elasticsearch.Client({
+    host: 'larch.webhop.org:9251'
+}); 
 
 app.get('/:search_query', function(request, response) {
   client.search({

@@ -1,0 +1,8 @@
+A tiny college search application.
+
+Search by college name:
+
+    http://$app-server:$port/$search_string
+    http://some.host.org:45151/Portland
+
+

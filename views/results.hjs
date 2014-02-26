@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Search results for: {{ query }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <p>Results for: <em>{{ query }}</em></p>
+    <table>
+      <thead>
+        <tr>
+          <th> School
+          <th> Location
+          <th> Match Score
+      <tbody>
+      {{#results}}
+        <tr>
+          <td> <a href="http://{{ _source.WEBADDR }}">{{ _source.INSTNM }}</a>
+          <td> {{ _source.CITY }}, {{ _source.STABBR }}
+          <td> {{ _score }}
+      {{/results}}
+    </table>
+  </body>
+</html>

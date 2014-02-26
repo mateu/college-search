@@ -1,0 +1,14 @@
+{
+  "name": "college-search",
+  "description": "College search",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "hogan.js": "",
+    "consolidate": "",
+    "elasticsearch": "",
+    "path": "",
+    "csv": "^0.3.7"
+  }
+}

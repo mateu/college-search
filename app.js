@@ -11,7 +11,7 @@ app.set('view engine', 'hjs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 var client = new elasticsearch.Client({
-    host: 'larch.webhop.org:9251'
+    host: 'localhost:9200'
 }); 
 
 app.get('/:search_query', function(request, response) {

@@ -1,8 +1,8 @@
-var fs  = require('fs')
-  , csv = require('csv')
+var csv = require('csv')
   , elasticsearch  = require('elasticsearch');
 
-var  client = new elasticsearch.Client();
+var clientArgs = { host: 'localhost:9200' };
+var client = new elasticsearch.Client(clientArgs);
 csv()
 .from.path(__dirname+'/data/hd2012.csv', { 
   delimiter: ',', 

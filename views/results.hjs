@@ -20,7 +20,7 @@
         <tr>
           <td> <a href="http://{{ _source.WEBADDR }}">{{ _source.INSTNM }}</a>
           <td> {{ _source.CITY }}, {{ _source.STABBR }}
-          <td style="text-align:center;"> {{ _score }}
+          <td class="center-text"> {{ _score }}
       {{/results}}
     </table>
     </div>

@@ -24,15 +24,18 @@ app.get('/:search_query', function(request, response) {
         }
       }
     },
-//    fields: ['INSTNM', 'CITY', 'STABBR', 'WEBADDR']
   }, function (error, search_response) {
     if (error) {
-      // handle error
       console.log('I wet myself: ' + error);
       return;
     }
+    var hits_transformed = [];
+    var hits = search_response.hits.hits;    
+    hits.forEach(function(hit) {
+      hits_transformed.push(transform(hit));
+    });
     response.render('results', {
-      results: search_response.hits.hits,
+      results: hits_transformed,
       query:  request.param('search_query'),
     });
   });
@@ -42,3 +45,12 @@ var port = 5000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
+
+
+// Helper functions
+function transform(hit) {
+    // Format Score
+    var score = hit._score.toFixed(2);
+    hit._score = hit._score.toFixed(2);
+    return hit;
+}

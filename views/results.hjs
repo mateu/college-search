@@ -7,8 +7,8 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <div style="text-align:center;"> 
-    <p>Results for: <em>{{ query }}</em></p>
+    <div> 
+    <p style="text-align:center;">Results for: <em>{{ query }}</em></p>
     <table class="pure-table pure-table-striped pure-table-horizontal" style="margin: 0px auto;">
       <thead>
         <tr>
@@ -20,7 +20,7 @@
         <tr>
           <td> <a href="http://{{ _source.WEBADDR }}">{{ _source.INSTNM }}</a>
           <td> {{ _source.CITY }}, {{ _source.STABBR }}
-          <td> {{ _score }}
+          <td style="text-align:center;"> {{ _score }}
       {{/results}}
     </table>
     </div>

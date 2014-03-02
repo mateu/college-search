@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" /> 
     <title>Search results for: {{ query }}</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <div style="text-align:center;"> 
     <p>Results for: <em>{{ query }}</em></p>
-    <table>
+    <table class="pure-table pure-table-striped pure-table-horizontal" style="margin: 0px auto;">
       <thead>
         <tr>
           <th> School
@@ -20,5 +23,6 @@
           <td> {{ _score }}
       {{/results}}
     </table>
+    </div>
   </body>
 </html>

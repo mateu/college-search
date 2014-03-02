@@ -8,7 +8,7 @@
   </head>
   <body>
     <div> 
-    <p style="text-align:center;">Results for: <em>{{ query }}</em></p>
+    <p class="title">Results for: <em>{{ query }}</em></p>
     <table class="pure-table pure-table-striped pure-table-horizontal" style="margin: 0px auto;">
       <thead>
         <tr>

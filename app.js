@@ -17,6 +17,7 @@ var client = new elasticsearch.Client({
 app.get('/:search_query', function(request, response) {
   client.search({
     index: 'ipeds',
+    size: 100,
     body: {
       query: {
         match: {
@@ -50,7 +51,6 @@ app.listen(port, function() {
 // Helper functions
 function transform(hit) {
     // Format Score
-    var score = hit._score.toFixed(2);
     hit._score = hit._score.toFixed(2);
     return hit;
 }

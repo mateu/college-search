@@ -41,7 +41,7 @@
     <script type="text/javascript">
       var options = {
         valueNames: [ 'name', 'location', 'score' ],
-        page: 20,
+        page: 12,
         plugins: [ ListPagination({
           outerWindow: 1
         }) ]

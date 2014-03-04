@@ -5,24 +5,37 @@
     <title>Search results for: {{ query }}</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="vendor/list.min.js"></script>
   </head>
   <body>
-    <div> 
-    <p class="title">Results for: <em>{{ query }}</em></p>
+    <div id="colleges">
+    <p class="title">Results for: <em>{{ query }}</em><br>
+      <input class="search" placeholder="Search within" />
+    </p>
     <table class="pure-table pure-table-striped pure-table-horizontal" style="margin: 0px auto;">
       <thead>
         <tr>
-          <th> School
-          <th> Location
-          <th> Match Score
-      <tbody>
+          <th class="name">
+            <button class="sort pure-button button-sort" data-sort="name">School </button>
+          <th class="location">
+            <button class="sort pure-button button-sort" data-sort="location">Location</button>
+           <th class="score">
+            <button class="sort pure-button button-sort" data-sort="score">Score</button>
+      <tbody class="list">
       {{#results}}
         <tr>
-          <td> <a href="http://{{ _source.WEBADDR }}">{{ _source.INSTNM }}</a>
-          <td> {{ _source.CITY }}, {{ _source.STABBR }}
-          <td class="center-text"> {{ _score }}
+          <td> <a href="http://{{ _source.WEBADDR }}"><span class="name">{{ _source.INSTNM }}</span></a>
+          <td class="location"> {{ _source.CITY }}, {{ _source.STABBR }}
+          <td class="score"> {{ _score }}
       {{/results}}
     </table>
     </div>
+
+    <script type="text/javascript">
+      var options = {
+        valueNames: [ 'name', 'location', 'score' ]
+      };
+      var collegeList = new List('colleges', options);
+    </script>
   </body>
 </html>

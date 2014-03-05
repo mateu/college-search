@@ -11,6 +11,7 @@
     "hogan.js": "",
     "consolidate": "",
     "elasticsearch": "",
-    "csv": "^0.3.7"
+    "csv": "^0.3.7",
+    "nconf": "^0.6.9"
   }
 }

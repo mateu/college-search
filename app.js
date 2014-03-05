@@ -1,7 +1,14 @@
 var express = require('express')
   , cons = require('consolidate')
   , elasticsearch = require('elasticsearch')
+  , nconf = require('nconf')
   , path = require('path');
+
+nconf.file({ file: 'config.json'});
+nconf.file({ file: 'config_local.json'});
+nconf.env().argv();
+// Allow env names for nested values
+nconf.env('__');
 
 var app = express();
 
@@ -11,7 +18,7 @@ app.set('view engine', 'hjs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 var client = new elasticsearch.Client({
-    host: 'huntana.com:9200'
+    hosts: nconf.get('es:hosts')
 }); 
 
 app.get('/:search_query', function(request, response) {
@@ -42,7 +49,7 @@ app.get('/:search_query', function(request, response) {
   });
 });
 
-var port = 5000;
+var port = nconf.get('http:port');
 app.listen(port, function() {
   console.log("Listening on " + port);
 });

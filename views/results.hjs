@@ -5,8 +5,6 @@
     <title>Search results for: {{ query }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="/vendor/pure-min.css">
-    <script asnyc src="/vendor/list.min.js"></script>
-    <script async src="/vendor/list.pagination.min.js"></script>
     <style type="text/css">
       .pagination li { display: inline; padding: 0.5em; } 
       .pagination { text-align: center; margin-top: 0; }
@@ -38,6 +36,8 @@
     <ul class="pagination"></ul>
     </div>
 
+    <script asnyc src="/vendor/list.min.js"></script>
+    <script async src="/vendor/list.pagination.min.js"></script>
     <script type="text/javascript">
       var options = {
         valueNames: [ 'name', 'location', 'score' ],

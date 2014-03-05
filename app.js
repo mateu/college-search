@@ -6,7 +6,11 @@ var express = require('express')
 
 nconf.file({ file: 'config.json'});
 nconf.file({ file: 'config_local.json'});
-nconf.env().argv();
+nconf.argv().env();
+nconf.defaults({
+  'http': {'port': 5000},
+  'es': {'hosts': ['huntana.com']}
+});
 // Allow env names for nested values
 nconf.env('__');
 

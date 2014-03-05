@@ -9,7 +9,7 @@ nconf.file({ file: 'config_local.json'});
 nconf.argv().env();
 nconf.defaults({
   'http': {'port': 5000},
-  'es': {'hosts': ['huntana.com']}
+  'es': {'hosts': ['huntana.com:9200']}
 });
 // Allow env names for nested values
 nconf.env('__');

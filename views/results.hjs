@@ -3,10 +3,10 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" /> 
     <title>Search results for: {{ query }}</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="vendor/list.min.js"></script>
-    <script src="vendor/list.pagination.min.js"></script>
+    <link rel="stylesheet" href="/vendor/pure-min.css">
+    <script src="/vendor/list.min.js"></script>
+    <script src="/vendor/list.pagination.min.js"></script>
     <style type="text/css">
       .pagination li { display: inline; padding: 0.5em; } 
       .pagination { text-align: center; margin-top: 0; }

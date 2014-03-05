@@ -3,30 +3,9 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" /> 
     <title>Search results for: {{ query }}</title>
-<!--    <link rel='stylesheet' href='/stylesheets/style.css' /> -->
     <link rel="stylesheet" href="/vendor/pure-min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <style type="text/css">
-      body {
-        padding: 0.1em;
-        font: 0.92em "Lucida Grande", Helvetica, Arial, sans-serif;
-      }
-      table{
-          background: white;
-          border-radius:10px;
-          -moz-border-radius:10px;
-          -webkit-border-radius:10px;
-          overflow: hidden;
-      }
-      .title {
-        text-align:center;
-        font-size:1.08em;
-        padding: 0;
-        margin: 0.2em;
-      }
-       .button-sort {
-        border-radius: 6px;
-        background-color: white;
-      }
       .pagination li { display: inline; padding: 0.5em; } 
       .pagination { text-align: center; margin-top: 0; }
     </style>

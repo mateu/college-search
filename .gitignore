@@ -3,3 +3,4 @@
 .build
 *.log
 node_modules/elasticsearch/elasticsearch-latest-SNAPSHOT.zip
+config_local.json

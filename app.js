@@ -4,9 +4,11 @@ var express = require('express')
   , nconf = require('nconf')
   , path = require('path');
 
-nconf.file({ file: 'config.json'});
-nconf.file({ file: 'config_local.json'});
-nconf.argv().env();
+nconf
+  .argv()
+  .env()
+  .file({ file: 'config.json'})
+  .file({ file: 'config_local.json'});
 nconf.defaults({
   'http': {'port': 5000},
   'es': {'hosts': ['huntana.com:9200']}

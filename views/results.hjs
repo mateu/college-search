@@ -36,8 +36,8 @@
     <ul class="pagination"></ul>
     </div>
 
-    <script asnyc src="/vendor/list.min.js"></script>
-    <script async src="/vendor/list.pagination.min.js"></script>
+    <script src="/vendor/list.min.js"></script>
+    <script src="/vendor/list.pagination.min.js"></script>
     <script type="text/javascript">
       var options = {
         valueNames: [ 'name', 'location', 'score' ],

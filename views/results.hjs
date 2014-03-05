@@ -35,7 +35,7 @@
     </table>
     <ul class="pagination"></ul>
     </div>
-
+<!--
     <script asnyc src="/vendor/list.min.js"></script>
     <script async src="/vendor/list.pagination.min.js"></script>
     <script type="text/javascript">
@@ -48,5 +48,6 @@
       };
       var collegeList = new List('colleges', options);
     </script>
+-->
   </body>
 </html>

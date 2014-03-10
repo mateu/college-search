@@ -14,9 +14,6 @@
 
 ## Notes
 
-### Slow indexing over WAN
-
-elasticsearch indexing (csv.js) over to a remote docker container (think ping ~ 120ms) 
-required me increasing the requestTimeout (to 100 seconds from 30 seconds) for the 
-indexing to complete.
+elasticsearch indexing via csv.js required setting the es client keepAlive
+to false to finish off the process
 

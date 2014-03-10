@@ -1,4 +1,4 @@
-# A tiny college search application.
+# A tiny college search application
 
 ## Load (index) data
 
@@ -8,7 +8,7 @@
 
   node app.js
 
-## Search by college name:
+## Search by college name
 
   http://localhost:5000/Texas
 
@@ -19,3 +19,4 @@
 elasticsearch indexing (csv.js) over to a remote docker container (think ping ~ 120ms) 
 required me increasing the requestTimeout (to 100 seconds from 30 seconds) for the 
 indexing to complete.
+

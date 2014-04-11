@@ -19,8 +19,8 @@ var client = new elasticsearch.Client(clientArgs);
 
 var bulk_body = [];
 csv()
-.from.path(__dirname+'/data/hd2012.csv', { 
-  delimiter: ',', 
+.from.path(__dirname+'/data/hd2012.csv', {
+  delimiter: ',',
   escape: '"',
   columns: true
 } )

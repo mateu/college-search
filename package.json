@@ -1,7 +1,12 @@
 {
   "name": "college-search",
-  "description": "College search",
   "version": "0.0.1",
+  "author": "Mateu X Hunter",
+  "description": "College search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mateu/college-search.git"
+  },
   "private": true,
   "engines": {
     "node": ">=0.10.21"
@@ -13,5 +18,8 @@
     "elasticsearch": "",
     "csv": "^0.3.7",
     "nconf": "^0.6.9"
+  },
+  "jshintConfig": {
+    "laxcomma": true
   }
 }
